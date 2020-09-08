@@ -1,0 +1,31 @@
+* The Observer Pattern
+** A newspaper publishes papers
+** You subscribe and each day a paper comes to you
+** You unsubscribe when you don't want them to come to you
+** Anyone can subscribe to the paper
+** Publishers + Subscribers = Observer Pattern
+** The Observer Pattern defines a one-to-many dependency between objects
+*** so that when one object changes state, all of its depends are
+*** notified and updated automatically
+* Scenario Outline
+** We pull data from weather station into a WeatherData Object
+** Then we take that data and display it
+** We will have Humidty Temperature and Pressure as our data
+** We want to create weather displays for each of those
+* WeatherData Class
+** getTemperature()
+** getHumidity()
+** getPressure()
+** measurementsChanges() <- This is the one that we are implementing
+*** This is called every time that new weather measurement data is available
+* Loose Coupling
+** Observer Pattern provides an object design where subjects and observers
+*** are loosely coupled
+** The only thing a subject needs to know is that the observer implementes
+*** a specific interface
+** We can add observers at any time
+** Don't need to change the subject for new types of observers
+** Reuse subjects or observers independently
+** Changes to either object will not impact the other
+* Strive for loosely coupled designs between objects that interact
+

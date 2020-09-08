@@ -1,0 +1,12 @@
+* SimUDuck
+** Inheritance comes with its advantages and disadvantages
+*** Advantage
+**** Code Reuse -> Code in the super class is given for free to all its children
+*** Disadvantage
+**** Side Effects -> Updating the super class can have un-intended side effects
+** Only constant in Software development is Change
+** #Identify the aspects of your application that vary and separate them from what stays the same#
+*** In the case of ducks... only the quack and fly methods vary between children 
+** #Program to an interface no an implementation#
+*** In the case of ducks... this means making FlyBehavior and QuackBehavior interfaces
+

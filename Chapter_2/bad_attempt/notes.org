@@ -1,0 +1,3 @@
+* This is going to a concrete implementation which is difficult to extend in the future
+* We are calling update on all these different we need to encapsulate it
+* We need the observer pattern!
