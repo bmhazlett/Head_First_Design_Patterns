@@ -1,28 +1,38 @@
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Arrays;
+
 public class StatisticsDisplay implements Observer, DisplayElement {
+    Observable observable;
     private float[] temperatures;
     private float[] humidities;
     private float[] pressures;
-    private Subject weatherData;
 
 
-    public StatisticsDisplay(Subject weatherData){
-	this.weatherData = weatherData;
-	weatherData.registerObserver(this);
+    public StatisticsDisplay(Observable observable){
+	this.observable = observable;
+        observable.addObserver(this);
 	this.temperatures = new float[0];
 	this.humidities = new float[0];
 	this.pressures = new float[0];
     }
 
-    public void update(float temperature, float humidity, float pressure) {
-	this.temperatures = Arrays.copyOf(temperatures, temperatures.length + 1);
-	temperatures[temperatures.length - 1] = temperature;
-	this.humidities = Arrays.copyOf(humidities, humidities.length + 1);
-	humidities[humidities.length - 1] = humidity;
-	this.pressures = Arrays.copyOf(pressures, pressures.length + 1);
-	pressures[pressures.length - 1] = pressure;
+    public void update(Observable obs, Object arg) {
+	if (obs instanceof WeatherData) {
+	    WeatherData weatherData = (WeatherData) obs;
+	    float temperature = weatherData.getTemperature();
+	    float humidity = weatherData.getHumidity();
+	    float pressure = weatherData.getPressure();
+	    
+	    this.temperatures = Arrays.copyOf(temperatures, temperatures.length + 1);
+	    temperatures[temperatures.length - 1] = temperature;
+	    this.humidities = Arrays.copyOf(humidities, humidities.length + 1);
+	    humidities[humidities.length - 1] = humidity;
+	    this.pressures = Arrays.copyOf(pressures, pressures.length + 1);
+	    pressures[pressures.length - 1] = pressure;
        
-	display();
+	    display();
+	}
     }
 
     public float average(float[] list){
