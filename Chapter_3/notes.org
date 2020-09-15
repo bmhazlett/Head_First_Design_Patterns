@@ -1,0 +1,19 @@
+* Starbuzz Coffee
+** Started with a simple pure inheirtence design
+*** Beverage
+**** HouseBlend, DarkRoast, Decaf, Espresso
+*** This led to an explosion of classes to handle every single situation
+*** Instance varables don't exactly help either
+* The Open-Closed Principle
+** Classes should be open for extension, but closed for modification
+** Doing this everywhere can make for code that is extremely complex and hard to interpret
+* The Decorator Pattern
+** How would it work for an example beverage
+1. Take a DarkRoast Object
+2. Decorated it with a Mocha object
+3. Decorate it with a Whip object
+4. Call the cost() method and rely on delegation to add on the condiment cost
+** Think of "decorate" as "wrap" 
+** The Decorator Pattern attaches additional responsibilities to an object dynamically.
+** Decorates provde a flexible alternative to subclassing for extending functionality/
+
