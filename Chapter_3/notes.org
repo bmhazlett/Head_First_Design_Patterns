@@ -17,3 +17,12 @@
 ** The Decorator Pattern attaches additional responsibilities to an object dynamically.
 ** Decorates provde a flexible alternative to subclassing for extending functionality/
 
+* Real World Decorators: Java I/O
+** java.io has a *TON* of classes
+** It is largely based on Decorator
+** LineNumberInputStream(Decorates(BufferedInputStream(Decorates(FileInputStream)))
+*** FileInputStream is a component
+*** BufferedInputStream is a concrete decorator
+*** LineNumberInputStream is a concrete decorator
+**** Both Buffered and LineNumber extend the abstract decorator FilterInputStream
+

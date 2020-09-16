@@ -1,3 +1,0 @@
-public abstract class CondiemntDecorator extends Beverage {
-    public abstract String getDescription();
-}
