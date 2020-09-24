@@ -30,7 +30,25 @@ public abstract class Pizza {
     }
 
     public String toString() {
-	// code to print pizza here
+	String returnString = "Dough: " + dough.getName();
+	returnString += "\nSauce: " + sauce.getName();
+	returnString += "\nCheese: " + cheese.getName();
+	if (pepperoni != null) {
+	    returnString += "\nPepperoni: " + pepperoni.getName();
+	}
+	if(clam != null) {
+	    returnString += "\nClams: " + clam.getName();
+	}
+	if (veggies != null) {
+	    returnString += "\nVeggies: ";
+	    for (int i = 0; i < veggies.length; i++) {
+		returnString += "\t\n" + veggies[i];
+	    }
+	}
+
+	return returnString;
+	
     }
+
 }
 

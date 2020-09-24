@@ -1,0 +1,14 @@
+* Why would you only need a single object of a class
+** Thread pools, caches, dialog boxes, objects that handle preferences
+** registry, objects for logging, and objecst that act as device drivers
+* Why not global variables
+** Singleton is a way of ensuring only one object but doesn't come with the 
+** baggage of global varibles
+** Global Variable Downsides
+*** You will ALWAYS have them even if you don't need them
+
+* The secret sauce of a singleton
+** private constructor with static access to the constructor that will only
+** call the constructor if the object had not yet already been made
+
+

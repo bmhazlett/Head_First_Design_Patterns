@@ -1,19 +1,19 @@
-public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
+public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
     public Dough createDough() {
-	return new ThinCrustDough();
+	return new ThickCrustDough();
     }
 
     public Sauce createSauce() {
-	return new MarinaraSauce();
+	return new PlumTomatoSauce();
     }
 
     public Cheese createCheese() {
-	return new ReggianoCheese();
+	return new MozzarellaCheese();
     }
 
     public Veggies[] createVeggies() {
-	Veggies veggies[] = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
+	Veggies veggies[] = { new Eggplant(), new Spinach(), new BlackOlive()  };
 	return veggies;
     }
 
@@ -22,7 +22,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     }
 
     public Clams createClams() {
-	return new FreshClams();
+	return new FrozenClams();
     }
 
 	
