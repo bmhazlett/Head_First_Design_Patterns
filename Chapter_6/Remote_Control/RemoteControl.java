@@ -15,7 +15,7 @@ public class RemoteControl {
 	}
     }
 
-    public void setCommand(int slot, Command onCommand, Command OffCommand) {
+    public void setCommand(int slot, Command onCommand, Command offCommand) {
 	onCommands[slot] = onCommand;
 	offCommands[slot] = offCommand;
     }
@@ -31,8 +31,8 @@ public class RemoteControl {
     public String toString() {
 	StringBuffer stringBuff = new StringBuffer();
 	stringBuff.append("\n------ Remote Control ------\n");
-	for (int i = 0; i < onCommand.length; i++) {
-	    stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName + "    " + offCommands.[i].getClass().getName() + "\n");
+	for (int i = 0; i < onCommands.length; i++) {
+	    stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName() + "    " + offCommands[i].getClass().getName() + "\n");
 	}
 
 	return stringBuff.toString();
