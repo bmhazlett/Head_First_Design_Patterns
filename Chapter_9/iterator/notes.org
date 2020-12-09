@@ -1,0 +1,14 @@
+* Defined
+** The Iterator Pattern provdies a way to access the elements of an
+** aggregate object sequentially without exposing its underlying representation
+** It lets you traverse an aggregate without worrying about whats below
+** Also seperates responsiblity from iteration in the aggregate to something 
+** dedicated to it
+
+* Single Responsiblity
+** Each responsibility of a class is an area of potential change. More than one
+** responsiblity means more than one area of change
+** Each class should have one responsiblity
+** Design Principle: A class should only have one reason to change
+** Related to cohesion classes should work in tandem not have one do all
+
