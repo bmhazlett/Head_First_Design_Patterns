@@ -1,4 +1,4 @@
-* Defined
+* Iterator Defined
 ** The Iterator Pattern provdies a way to access the elements of an
 ** aggregate object sequentially without exposing its underlying representation
 ** It lets you traverse an aggregate without worrying about whats below
@@ -11,4 +11,10 @@
 ** Each class should have one responsiblity
 ** Design Principle: A class should only have one reason to change
 ** Related to cohesion classes should work in tandem not have one do all
+
+* Composite Pattern Defined
+** The Composite Pattern allows you to compose objecst into tree structures
+** to represent part-whole heirarchies. Composite lets clients treat individual
+** objects and compositions of objects uniformly.
+
 
