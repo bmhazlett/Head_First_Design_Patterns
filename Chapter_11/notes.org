@@ -1,0 +1,4 @@
+* Remote Proxy Pattern
+** Local representative of a remote object
+** Local Heap PROXY -> Remote Heap Thing
+
