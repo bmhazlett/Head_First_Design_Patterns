@@ -2,3 +2,23 @@
 ** Local representative of a remote object
 ** Local Heap PROXY -> Remote Heap Thing
 
+
+* Proxy Pattern defined
+** The Proxy Pattern provides a surroagate or placeholder for another object
+** to control access to it.
+** A remote proxy controls access to a remote object
+** A virtual proxy controls access to a resource that is expensive to create
+** A protection proxy controls access to a resource based on access rights
+
+* Subject
+** RealSubject
+** Proxy
+
+* Virtual Proxy
+** Acts as a representative for an object that may be expensive to create
+** Defers creation until needed
+** Once creation completes it delegates the work to RealSubject
+** Example is a loading message when an image is loading
+
+* Protection Proxy
+** Dynamic Proxy in Java

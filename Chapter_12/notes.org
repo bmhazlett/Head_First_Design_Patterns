@@ -1,0 +1,4 @@
+* Compound patterns
+** Patterns are often used together and combined within a design solution
+** A compound pattern combines tow or mare patters into a solution that solves
+** a recurring or general problem
